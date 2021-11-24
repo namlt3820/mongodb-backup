@@ -6,6 +6,11 @@ import { MONGO_URI, DB_NAME, CRON_TIME, BACKUP_LIMIT } from "./config";
 
 const backup = async () => {
 	try {
+		const dir = "dump";
+		if (!fs.existsSync(dir)) {
+			fs.mkdirSync(dir);
+		}
+
 		const dateJSON = new Date().toJSON();
 
 		await spawn("mongodump", [
