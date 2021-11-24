@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  parallel_backend:
+    container_name: "parallel_backend_${NODE_ENV}"
+    ports:
+      - "${GRAPHQL_PORT}:${GRAPHQL_PORT}"
+    environment:
+      - NODE_ENV
+    build:
+      context: .
+    volumes:
+      - /app/node_modules
