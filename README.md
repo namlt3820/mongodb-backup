@@ -10,3 +10,4 @@
 1. `mkdir restore` from project root directory
 2. `mongod --dbpath restore`
 3. `mongorestore --gzip --archive=dump/${Filename}.gz`
+4. For remote mongodb, use `mongorestore --uri= --gzip= --archive=`
