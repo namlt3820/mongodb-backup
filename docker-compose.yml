@@ -2,9 +2,10 @@ version: '2'
 
 services:
   mongodb_backup:
-    container_name: "mongodb_backup"
+    container_name: "mongodb_backup_${DB_NAME}"
     build:
       context: .
+    restart: always
     volumes:
       - /app/node_modules
       - ./dump:/app/dump
