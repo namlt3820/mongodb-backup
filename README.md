@@ -11,3 +11,5 @@
 2. `mongod --dbpath restore`
 3. `mongorestore --gzip --archive=dump/${Filename}.gz`
 4. For remote mongodb, use `mongorestore --uri= --gzip= --archive=`
+5. For remote mongodb with different db name, use `mongorestore --uri= --gzip --archive= --nsFrom "old_db.*" --nsTo "new_db.*"
+   `
