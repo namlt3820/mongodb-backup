@@ -22,9 +22,7 @@ const backup = async () => {
 
 		console.log(`Successfully backed up the database at ${dateJSON}`);
 	} catch (e) {
-		e.code
-			? console.log("Backup process exited with code ", e.code)
-			: console.log(e);
+		console.log(e);
 	}
 };
 
